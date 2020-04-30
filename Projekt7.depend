@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1588031013 source:c:\users\wojci\documents\paczka_55\plus\projekt7\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1588031010 c:\users\wojci\documents\paczka_55\plus\projekt7\metodypomocnicze.h
+	<iostream>
+	<sstream>
+
+1588189433 source:c:\users\wojci\documents\paczka_55\plus\projekt7\ksiazkaadresowa.cpp
+	"KsiazkaAdresowa.h"
+
+1588189433 c:\users\wojci\documents\paczka_55\plus\projekt7\ksiazkaadresowa.h
+	<iostream>
+	"UzytkownikMenedzer.h"
+
+1588189433 c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownikmenedzer.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Uzytkownik.h"
+	"PlikZUzytkownikami.h"
+
+1588030998 c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.h
+	<iostream>
+
+1588202502 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Uzytkownik.h"
+	"MetodyPomocnicze.h"
+
+1588030996 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1588192969 source:c:\users\wojci\documents\paczka_55\plus\projekt7\main.cpp
+	<iostream>
+	"Ksiazkaadresowa.h"
+
+1588192724 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownikmenedzer.cpp
+	"UzytkownikMenedzer.h"
+
+1588205154 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
