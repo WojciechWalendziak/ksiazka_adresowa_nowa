@@ -1,60 +1,57 @@
 #include "AdresatMenedzer.h"
-#include "PlikZAdresatami.h"
-#include "MetodyPomocnicze.h"
+//#include "PlikZAdresatami.h"
+//#include "MetodyPomocnicze.h"
 
-int AdresatMenedzer::dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+//int AdresatMenedzer::dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika, idOstatniegoAdresata);
+    //adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika, idOstatniegoAdresata);
+    adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
-
-    return ++idOstatniegoAdresata;
+    //if(plikZAdresatami.dopiszAdresataDoPliku(adresat))
+        //cout << "Nowy adresat zostal dodany" << endl;
+    //else
+        //cout << "Blad. Nie udalo sie dodac adresata do pliku" << endl;
+    system("pause");
 }
-string AdresatMenedzer::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst)
-{
-    if (!tekst.empty())
-    {
-        transform(tekst.begin(), tekst.end(), tekst.begin(), ::tolower);
-        tekst[0] = toupper(tekst[0]);
-    }
-    return tekst;
-}
-Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+//Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
     string wejscie;
 
-    adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
-    cin >> wejscie;
-    wejscie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
+    wejscie = MetodyPomocnicze::wczytajLinie();
+    wejscie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
     adresat.ustawImie(wejscie);
 
     cout << "Podaj nazwisko: ";
-    cin >> wejscie;
-    wejscie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
+    wejscie = MetodyPomocnicze::wczytajLinie();
+    wejscie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
     adresat.ustawNazwisko(wejscie);
 
     cout << "Podaj numer telefonu: ";
-    cin >> wejscie;
-    wejscie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
+    wejscie = MetodyPomocnicze::wczytajLinie();
+    wejscie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
     adresat.ustawNumerTelefonu(wejscie);
 
     cout << "Podaj email: ";
-    cin >> wejscie;
-    wejscie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
+    wejscie = MetodyPomocnicze::wczytajLinie();
+    wejscie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
     adresat.ustawEmail(wejscie);
 
     cout << "Podaj adres: ";
-    getline(cin, wejscie);
-    wejscie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
+    wejscie = MetodyPomocnicze::wczytajLinie();
+    wejscie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(wejscie);
     adresat.ustawAdres(wejscie);
     return adresat;
 }
@@ -73,7 +70,7 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Email:              " << adresat.pobierzEmail() << endl;
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
-void AdresatMenedzer::wyswietlWszystkichAdresatow(vector <Adresat> &adresaci)
+void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
     system("cls");
     if (!adresaci.empty())
@@ -143,8 +140,8 @@ int AdresatMenedzer::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(st
 
     return idUzytkownika;
 }
-void AdresatMenedzer::wyloguj (vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
-{
-    idZalogowanegoUzytkownika = 0;
-    adresaci.clear();
-}
+//void AdresatMenedzer::wyloguj (vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
+//{
+    //idZalogowanegoUzytkownika = 0;
+    //adresaci.clear();
+//}

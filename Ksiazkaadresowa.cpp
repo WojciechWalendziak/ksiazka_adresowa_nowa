@@ -9,28 +9,50 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 {
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
-
-int KsiazkaAdresowa::logowanieUzytkownika(vector <Uzytkownik> &uzytkownicy)
+void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    return uzytkownikMenedzer.logowanieUzytkownika(uzytkownicy);
+    uzytkownikMenedzer.logowanieUzytkownika();
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+    }
 }
-
-void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(vector <Uzytkownik> &uzytkownicy, int idZalogowanegoUzytkownika)
+//int KsiazkaAdresowa::logowanieUzytkownika(vector <Uzytkownik> &uzytkownicy)
+//{
+    //return uzytkownikMenedzer.logowanieUzytkownika(uzytkownicy);
+//}
+void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 {
-    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
+    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
 }
-
-void KsiazkaAdresowa::dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMenedzer.dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer -> dodajAdresata();
+    }
+    else
+    {
+        cout << "Aby dodac adresata najpierw musisz sie zalogowac" << endl;
+        system("pause");
+    }
 }
+//void KsiazkaAdresowa::dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+//{
+    //adresatMenedzer.dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
+//}
 
-void KsiazkaAdresowa::wyswietlWszystkichAdresatow(vector <Adresat> &adresaci)
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
-    adresatMenedzer.wyswietlWszystkichAdresatow(adresaci);
+    adresatMenedzer -> wyswietlWszystkichAdresatow();
 }
-
-void KsiazkaAdresowa::wyloguj(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
+void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
-    adresatMenedzer.wyloguj(adresaci, idZalogowanegoUzytkownika);
+    uzytkownikMenedzer.wylogowanieUzytkownika();
+    delete adresatMenedzer;
+    adresatMenedzer = NULL;
 }
+//void KsiazkaAdresowa::wyloguj(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
+//{
+    //adresatMenedzer.wyloguj(adresaci, idZalogowanegoUzytkownika);
+//}

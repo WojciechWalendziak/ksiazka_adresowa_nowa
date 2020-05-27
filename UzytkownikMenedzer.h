@@ -14,23 +14,30 @@ using namespace std;
 
 class UzytkownikMenedzer
 {
-    vector <Uzytkownik> uzytkownicy;
     int idZalogowanegoUzytkownika;
+    vector <Uzytkownik> uzytkownicy;
 
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
-    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
+    //void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
     PlikZUzytkownikami plikZUzytkownikami;
 
 public:
 
-    int logowanieUzytkownika(vector <Uzytkownik> &uzytkownicy);
-    void zmianaHaslaZalogowanegoUzytkownika(vector <Uzytkownik> &uzytkownicy, int idZalogowanegoUzytkownika);
-    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
+    //int logowanieUzytkownika(vector <Uzytkownik> &uzytkownicy);
+    void logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {
+        idZalogowanegoUzytkownika = 0;
+        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void wczytajUzytkownikowZPliku();
+    //void wczytajUzytkownikowZPliku();
+    void wylogowanieUzytkownika();
+    bool czyUzytkownikJestZalogowany();
+    int pobierzIdZalogowanegoUzytkownika();
 
 };
 #endif

@@ -9,21 +9,31 @@ using namespace std;
 
 class KsiazkaAdresowa
 {
-    AdresatMenedzer adresatMenedzer;
+    AdresatMenedzer *adresatMenedzer;
     UzytkownikMenedzer uzytkownikMenedzer;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami){
-        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
+        :uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
+    {
+      adresatMenedzer = NULL;
     };
-
-    int logowanieUzytkownika(vector <Uzytkownik> &uzytkownicy);
-    void zmianaHaslaZalogowanegoUzytkownika(vector <Uzytkownik> &uzytkownicy, int idZalogowanegoUzytkownika);
+    ~KsiazkaAdresowa()
+    {
+        delete adresatMenedzer;
+        adresatMenedzer = NULL;
+    }
+    //int logowanieUzytkownika(vector <Uzytkownik> &uzytkownicy);
+    void logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 
-    void dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
-    void wyswietlWszystkichAdresatow(vector <Adresat> &adresaci);
-    void wyloguj(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
+    //void dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
+    void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
+    void wylogowanieUzytkownika();
+    //void wyloguj(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
 };
 #endif
