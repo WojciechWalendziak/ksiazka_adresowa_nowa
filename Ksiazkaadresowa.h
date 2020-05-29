@@ -25,6 +25,9 @@ public:
         adresatMenedzer = NULL;
     }
     //int logowanieUzytkownika(vector <Uzytkownik> &uzytkownicy);
+    //wczytajUzytkownikowZPliku(uzytkownicy);
+
+    bool czyUzytkownikJestZalogowany();
     void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void rejestracjaUzytkownika();

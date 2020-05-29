@@ -52,6 +52,10 @@ void KsiazkaAdresowa::wylogowanieUzytkownika()
     delete adresatMenedzer;
     adresatMenedzer = NULL;
 }
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
+{
+    uzytkownikMenedzer.czyUzytkownikJestZalogowany();
+}
 //void KsiazkaAdresowa::wyloguj(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
 //{
     //adresatMenedzer.wyloguj(adresaci, idZalogowanegoUzytkownika);
