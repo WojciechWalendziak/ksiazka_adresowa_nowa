@@ -17,5 +17,6 @@ public:
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     static char wczytajZnak();
     static char wybierzOpcjeZMenuGlownego();
+    static char wybierzOpcjeZMenuUzytkownika();
 };
 #endif

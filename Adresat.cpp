@@ -6,7 +6,7 @@
     }
     void Adresat::ustawIdUzytkownika(int noweIdUzytkownika)
     {
-        id = noweIdUzytkownika;
+        idUzytkownika = noweIdUzytkownika;
     }
     void Adresat::ustawImie(string noweImie)
     {
@@ -35,7 +35,7 @@
     }
     int Adresat::pobierzIdUzytkownika()
     {
-        return id;
+        return idUzytkownika;
     }
     string Adresat::pobierzImie()
     {

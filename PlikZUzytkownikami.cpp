@@ -42,24 +42,27 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
     fstream plikTekstowy;
 
     plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::in);
-
+    //cout << NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str() << endl;
     if (plikTekstowy.good() == true)
     {
         while (getline(plikTekstowy, daneJednegoUzytkownikaOddzielonePionowymiKreskami))
         {
-            uzytkownik = pobierzDaneUzytkownika();
+            //cout << daneJednegoUzytkownikaOddzielonePionowymiKreskami << endl;
+            uzytkownik = pobierzDaneUzytkownika(daneJednegoUzytkownikaOddzielonePionowymiKreskami);
             uzytkownicy.push_back(uzytkownik);
         }
         plikTekstowy.close();
     }
     return uzytkownicy;
 }
-Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika()
+//Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika()
+Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)
 {
     Uzytkownik uzytkownik;
-    string daneJednegoUzytkownikaOddzielonePionowymiKreskami = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownik);
+    //string daneJednegoUzytkownikaOddzielonePionowymiKreskami = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownik);
     string pojedynczaDanaUzytkownika = "";
     int numerPojedynczejDanejUzytkownika = 1;
+    int test;
 
     for (int pozycjaZnaku = 0; pozycjaZnaku < daneJednegoUzytkownikaOddzielonePionowymiKreskami.length(); pozycjaZnaku++)
     {

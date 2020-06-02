@@ -2,6 +2,9 @@
 #include "Ksiazkaadresowa.h"
 
 using namespace std;
+
+int idZalogowanegoUzytkownika = 0;
+
 char wybor;
 
 int main()
@@ -10,6 +13,7 @@ int main()
     //ksiazkaAdresowa.wczytajUzytkownikowZPliku();
     while (true)
     {
+        cout << "druga petla" << endl;
         if (ksiazkaAdresowa.czyUzytkownikJestZalogowany())
         {
             wybor = MetodyPomocnicze::wybierzOpcjeZMenuGlownego();
@@ -20,18 +24,36 @@ int main()
                 ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
                 break;
             case '2':
+                ksiazkaAdresowa.dodajAdresata();
+                break;
+            case '3':
+                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+                break;
+            case '4':
+                ksiazkaAdresowa.wylogowanieUzytkownika();
+                break;
+            case '5':
+                exit(0);
+                break;
+            default:
+                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                system("pause");
+                break;
+            }
+        }
+        else
+        {
+            wybor = MetodyPomocnicze::wybierzOpcjeZMenuUzytkownika();
+
+            switch (wybor)
+            {
+            case '1':
+                ksiazkaAdresowa.rejestracjaUzytkownika();
+                break;
+            case '2':
                 ksiazkaAdresowa.logowanieUzytkownika();
                 break;
             case '3':
-                ksiazkaAdresowa.dodajAdresata();
-                break;
-            case '4':
-                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-                break;
-            case '5':
-                ksiazkaAdresowa.wylogowanieUzytkownika();
-                break;
-            case '6':
                 exit(0);
                 break;
             default:

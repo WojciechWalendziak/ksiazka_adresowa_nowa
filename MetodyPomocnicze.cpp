@@ -67,9 +67,27 @@ char MetodyPomocnicze::wybierzOpcjeZMenuGlownego()
     system("cls");
     cout << "    >>> MENU  GLOWNE <<<" << endl;
     cout << "---------------------------" << endl;
-    cout << "1. Rejestracja" << endl;
-    cout << "2. Logowanie" << endl;
-    cout << "9. Koniec programu" << endl;
+    cout << "1. wypisz wszystkich uzytkownikow" << endl;
+    cout << "2. dodaj adresata" << endl;
+    cout << "3. wyswietl wszystkich adresatow" << endl;
+    cout << "4. wylogowanie uzytkownika" << endl;
+    cout << "5. Koniec programu" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Twoj wybor: ";
+    wybor = wczytajZnak();
+
+    return wybor;
+}
+char MetodyPomocnicze::wybierzOpcjeZMenuUzytkownika()
+{
+    char wybor;
+
+    system("cls");
+    cout << "    >>> MENU  GLOWNE <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "1. rejestracja uzytkownika" << endl;
+    cout << "2. logowanie uzytkownika" << endl;
+    cout << "3. Koniec programu" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
     wybor = wczytajZnak();

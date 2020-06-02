@@ -6,12 +6,13 @@
 void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
+    //vector <Adresat> adresaci;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
     //adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika, idOstatniegoAdresata);
     adresat = podajDaneNowegoAdresata();
-
+    wyswietlDaneAdresata(adresat);
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
     //if(plikZAdresatami.dopiszAdresataDoPliku(adresat))
@@ -26,7 +27,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     Adresat adresat;
     string wejscie;
 
-    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
+    adresat.ustawId(pobierzIdNowegoAdresata());
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
@@ -55,11 +56,20 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     adresat.ustawAdres(wejscie);
     return adresat;
 }
-int AdresatMenedzer::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
+int AdresatMenedzer::pobierzIdNowegoAdresata()
 {
-    int pozycjaRozpoczeciaIdAdresata = 0;
-    int idAdresata = MetodyPomocnicze::konwersjaStringNaInt(MetodyPomocnicze::pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdAdresata));
-    return idAdresata;
+    vector <Adresat> adresaci;
+    //PlikZUzytkownikami plikZUzytkownikami;
+    //idZalogowanegoUzytkownika = pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    if (adresaci.empty() == true)
+    {
+        return 1;
+    }
+    else
+    {
+        return adresaci.back().pobierzId() + 1;
+    }
 }
 void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
 {
@@ -72,6 +82,7 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
 }
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
+    //vector <Adresat> adresaci;
     system("cls");
     if (!adresaci.empty())
     {
@@ -139,6 +150,12 @@ int AdresatMenedzer::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(st
     int idUzytkownika = MetodyPomocnicze::konwersjaStringNaInt(MetodyPomocnicze::pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdUzytkownika));
 
     return idUzytkownika;
+}
+int AdresatMenedzer::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
+{
+    int pozycjaRozpoczeciaIdAdresata = 0;
+    int idAdresata = MetodyPomocnicze::konwersjaStringNaInt(MetodyPomocnicze::pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdAdresata));
+    return idAdresata;
 }
 //void AdresatMenedzer::wyloguj (vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
 //{

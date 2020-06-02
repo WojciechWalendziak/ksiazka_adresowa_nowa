@@ -8,7 +8,7 @@
 #include<fstream>
 #include <sstream>
 
-#include "Adresat.h"
+//#include "Adresat.h"
 #include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
 
@@ -41,6 +41,7 @@ public:
     //int dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    int pobierzIdNowegoAdresata();
 
     //void wyloguj (vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
 };
