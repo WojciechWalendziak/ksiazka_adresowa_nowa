@@ -37,7 +37,7 @@
 1590323100 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1591104799 source:c:\users\wojci\documents\paczka_55\plus\projekt7\main.cpp
+1591145071 source:c:\users\wojci\documents\paczka_55\plus\projekt7\main.cpp
 	<iostream>
 	"Ksiazkaadresowa.h"
 
@@ -47,7 +47,7 @@
 1591096428 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1591141281 c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.h
+1591231808 c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -60,7 +60,7 @@
 1590574051 c:\users\wojci\documents\paczka_55\plus\projekt7\adresat.h
 	<iostream>
 
-1591128880 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.h
+1591232908 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -71,9 +71,9 @@
 1591142897 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresat.cpp
 	"Adresat.h"
 
-1591122478 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.cpp
+1591232908 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1591141281 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.cpp
+1591233334 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.cpp
 	"AdresatMenedzer.h"
 

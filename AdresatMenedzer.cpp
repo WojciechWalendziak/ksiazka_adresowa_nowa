@@ -60,16 +60,11 @@ int AdresatMenedzer::pobierzIdNowegoAdresata()
 {
     vector <Adresat> adresaci;
     //PlikZUzytkownikami plikZUzytkownikami;
-    //idZalogowanegoUzytkownika = pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    adresaci = plikZAdresatami.wczytajAdresatowZPliku();
     if (adresaci.empty() == true)
-    {
         return 1;
-    }
     else
-    {
         return adresaci.back().pobierzId() + 1;
-    }
 }
 void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
 {
@@ -82,7 +77,9 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
 }
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
-    //vector <Adresat> adresaci;
+    vector <Adresat> adresaci;
+    //PlikZUzytkownikami plikZUzytkownikami;
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     system("cls");
     if (!adresaci.empty())
     {
