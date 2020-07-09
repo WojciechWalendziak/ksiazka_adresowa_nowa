@@ -1,21 +1,21 @@
 # depslib dependency file v1.0
-1591052841 source:c:\users\wojci\documents\paczka_55\plus\projekt7\metodypomocnicze.cpp
+1593298017 source:c:\users\wojci\documents\paczka_55\plus\projekt7\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1591052841 c:\users\wojci\documents\paczka_55\plus\projekt7\metodypomocnicze.h
+1593298342 c:\users\wojci\documents\paczka_55\plus\projekt7\metodypomocnicze.h
 	<iostream>
 	<sstream>
 	<algorithm>
 
-1590737859 source:c:\users\wojci\documents\paczka_55\plus\projekt7\ksiazkaadresowa.cpp
+1592693223 source:c:\users\wojci\documents\paczka_55\plus\projekt7\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
-1590737859 c:\users\wojci\documents\paczka_55\plus\projekt7\ksiazkaadresowa.h
+1592693223 c:\users\wojci\documents\paczka_55\plus\projekt7\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenedzer.h"
 	"AdresatMenedzer.h"
 
-1591057097 c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownikmenedzer.h
+1592693224 c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownikmenedzer.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -23,31 +23,32 @@
 	<sstream>
 	"PlikZUzytkownikami.h"
 
-1590323100 c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.h
+1592693224 c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.h
 	<iostream>
 
-1591096090 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.h
+1594253528 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
 	<cstdlib>
 	"Uzytkownik.h"
 	"MetodyPomocnicze.h"
+	"PlikTekstowy.h"
 
-1590323100 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.cpp
+1592693223 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1591145071 source:c:\users\wojci\documents\paczka_55\plus\projekt7\main.cpp
+1592693223 source:c:\users\wojci\documents\paczka_55\plus\projekt7\main.cpp
 	<iostream>
 	"Ksiazkaadresowa.h"
 
-1591114356 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownikmenedzer.cpp
+1592693224 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownikmenedzer.cpp
 	"UzytkownikMenedzer.h"
 
-1591096428 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.cpp
+1594280499 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1591231808 c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.h
+1592693224 c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -57,23 +58,31 @@
 	"PlikZAdresatami.h"
 	"MetodyPomocnicze.h"
 
-1590574051 c:\users\wojci\documents\paczka_55\plus\projekt7\adresat.h
+1592693224 c:\users\wojci\documents\paczka_55\plus\projekt7\adresat.h
 	<iostream>
 
-1591232908 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.h
+1594250781 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.h
 	<iostream>
 	<vector>
 	<fstream>
 	<cstdlib>
+	"PlikTekstowy.h"
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 
-1591142897 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresat.cpp
+1592693224 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresat.cpp
 	"Adresat.h"
 
-1591232908 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.cpp
+1594280590 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1591233334 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.cpp
+1592693224 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.cpp
 	"AdresatMenedzer.h"
+
+1594250360 c:\users\wojci\documents\paczka_55\plus\projekt7\pliktekstowy.h
+	<iostream>
+	<fstream>
+
+1594250312 source:c:\users\wojci\documents\paczka_55\plus\projekt7\pliktekstowy.cpp
+	"PlikTekstowy.h"
 
