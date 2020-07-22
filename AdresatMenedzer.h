@@ -28,6 +28,7 @@ class AdresatMenedzer
     //string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    int podajIdWybranegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
 
@@ -45,6 +46,8 @@ public:
         }
     //int dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
     void dodajAdresata();
+    void edytujAdresata();
+    int usunAdresata();
     void wyswietlWszystkichAdresatow();
     int pobierzIdNowegoAdresata();
 

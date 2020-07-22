@@ -71,7 +71,10 @@ char MetodyPomocnicze::wybierzOpcjeZMenuGlownego()
     cout << "2. dodaj adresata" << endl;
     cout << "3. wyswietl wszystkich adresatow" << endl;
     cout << "4. wylogowanie uzytkownika" << endl;
-    cout << "5. Koniec programu" << endl;
+    cout << "5. zmiana Hasla Uzytkownika" << endl;
+    cout << "6. edytuj Adresata" << endl;
+    cout << "7. usun Adresata" << endl;
+    cout << "8. Koniec programu" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
     wybor = wczytajZnak();
@@ -111,4 +114,20 @@ char MetodyPomocnicze::wybierzOpcjeZMenuEdycja()
     wybor = wczytajZnak();
 
     return wybor;
+}
+int MetodyPomocnicze::wczytajLiczbeCalkowita()
+{
+    string wejscie = "";
+    int liczba = 0;
+
+    while (true)
+    {
+        getline(cin, wejscie);
+
+        stringstream myStream(wejscie);
+        if (myStream >> liczba)
+            break;
+        cout << "To nie jest liczba. Wpisz ponownie. " << endl;
+    }
+    return liczba;
 }

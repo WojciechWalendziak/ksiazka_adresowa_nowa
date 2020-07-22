@@ -52,6 +52,14 @@ void KsiazkaAdresowa::wylogowanieUzytkownika()
     delete adresatMenedzer;
     adresatMenedzer = NULL;
 }
+void KsiazkaAdresowa::edytujAdresata()
+{
+    adresatMenedzer -> edytujAdresata();
+}
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenedzer -> usunAdresata();
+}
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 {
     uzytkownikMenedzer.czyUzytkownikJestZalogowany();

@@ -13,7 +13,6 @@ int main()
     //ksiazkaAdresowa.wczytajUzytkownikowZPliku();
     while (true)
     {
-        cout << "druga petla" << endl;
         if (ksiazkaAdresowa.czyUzytkownikJestZalogowany())
         {
             wybor = MetodyPomocnicze::wybierzOpcjeZMenuGlownego();
@@ -33,6 +32,15 @@ int main()
                 ksiazkaAdresowa.wylogowanieUzytkownika();
                 break;
             case '5':
+                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+                break;
+            case '6':
+                ksiazkaAdresowa.edytujAdresata();
+                break;
+            case '7':
+                ksiazkaAdresowa.usunAdresata();
+                break;
+            case '8':
                 exit(0);
                 break;
             default:
@@ -63,17 +71,5 @@ int main()
             }
         }
     }
-    //.wypiszWszystkichUzytkownikow();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-
-    //ksiazkaAdresowa.logowanieUzytkownika();
-    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-
-    //ksiazkaAdresowa.dodajAdresata();
-    //ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-    //KsiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
-    //ksiazkaAdresowa.wyloguj();
-
     return 0;
 }

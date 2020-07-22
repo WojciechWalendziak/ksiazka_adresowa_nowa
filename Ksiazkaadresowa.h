@@ -31,6 +31,8 @@ public:
     void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void rejestracjaUzytkownika();
+    void edytujAdresata();
+    void usunAdresata();
     void wypiszWszystkichUzytkownikow();
 
     //void dodajAdresata(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
