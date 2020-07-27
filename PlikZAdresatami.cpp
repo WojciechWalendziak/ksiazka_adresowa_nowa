@@ -170,10 +170,10 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idAdresata)
 {
     fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
     string wczytanaLinia = "";
-    string nazwaTymczasowegoPlikuZAdresatami = "tymczasowy_plik_tekstowy.txt";
-    tymczasowyPlikTekstowy.open("tymczasowy_plik_tekstowy.txt", ios::out | ios::app);
-
     int numerWczytanejLinii = 1;
+
+    string nazwaTymczasowegoPlikuZAdresatami = "tymczasowy_plik_tekstowy.txt";
+    //tymczasowyPlikTekstowy.open("tymczasowy_plik_tekstowy.txt", ios::out | ios::app);
 
     odczytywanyPlikTekstowy.open(pobierzNazwePliku().c_str(), ios::in);
     tymczasowyPlikTekstowy.open("tymczasowy_plik_tekstowy.txt", ios::out | ios::app);
@@ -196,6 +196,9 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idAdresata)
     }
     odczytywanyPlikTekstowy.close();
     tymczasowyPlikTekstowy.close();
+
+    usunPlik(pobierzNazwePliku().c_str());
+    zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, pobierzNazwePliku().c_str());
 }
 int PlikZAdresatami::zwrocNumerLiniiSzukanegoAdresata(int idAdresata)
 {
