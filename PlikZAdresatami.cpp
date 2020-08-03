@@ -171,6 +171,8 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idAdresata)
     fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
     string wczytanaLinia = "";
     int numerWczytanejLinii = 1;
+    int NumerUsuwanejLini;
+    NumerUsuwanejLini = zwrocNumerLiniiSzukanegoAdresata(idAdresata);
 
     string nazwaTymczasowegoPlikuZAdresatami = "tymczasowy_plik_tekstowy.txt";
     //tymczasowyPlikTekstowy.open("tymczasowy_plik_tekstowy.txt", ios::out | ios::app);
@@ -182,14 +184,14 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idAdresata)
     {
         while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
         {
-                    if (numerWczytanejLinii == idAdresata) {}
-                    else if (numerWczytanejLinii == 1 && numerWczytanejLinii != idAdresata)
+                    if (numerWczytanejLinii == NumerUsuwanejLini) {}
+                    else if (numerWczytanejLinii == 1 && numerWczytanejLinii != NumerUsuwanejLini)
                         tymczasowyPlikTekstowy << wczytanaLinia;
-                    else if (numerWczytanejLinii == 2 && idAdresata == 1)
+                    else if (numerWczytanejLinii == 2 && NumerUsuwanejLini == 1)
                         tymczasowyPlikTekstowy << wczytanaLinia;
-                    else if (numerWczytanejLinii > 2 && idAdresata == 1)
+                    else if (numerWczytanejLinii > 2 && NumerUsuwanejLini == 1)
                         tymczasowyPlikTekstowy << endl << wczytanaLinia;
-                    else if (numerWczytanejLinii > 1 && idAdresata != 1)
+                    else if (numerWczytanejLinii > 1 && NumerUsuwanejLini != 1)
                         tymczasowyPlikTekstowy << endl << wczytanaLinia;
                     numerWczytanejLinii++;
         }

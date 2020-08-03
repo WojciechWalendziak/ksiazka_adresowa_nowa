@@ -1,1 +1,88 @@
 # depslib dependency file v1.0
+1592693224 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresat.cpp
+	"Adresat.h"
+
+1592693224 c:\users\wojci\documents\paczka_55\plus\projekt7\adresat.h
+	<iostream>
+
+1595409503 source:c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.cpp
+	"AdresatMenedzer.h"
+
+1595348105 c:\users\wojci\documents\paczka_55\plus\projekt7\adresatmenedzer.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<algorithm>
+	<fstream>
+	<sstream>
+	"PlikZAdresatami.h"
+	"MetodyPomocnicze.h"
+
+1595352486 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"PlikTekstowy.h"
+	"Adresat.h"
+	"MetodyPomocnicze.h"
+
+1594250360 c:\users\wojci\documents\paczka_55\plus\projekt7\pliktekstowy.h
+	<iostream>
+	<fstream>
+
+1595352063 c:\users\wojci\documents\paczka_55\plus\projekt7\metodypomocnicze.h
+	<iostream>
+	<sstream>
+	<algorithm>
+
+1595347531 source:c:\users\wojci\documents\paczka_55\plus\projekt7\ksiazkaadresowa.cpp
+	"KsiazkaAdresowa.h"
+
+1595347531 c:\users\wojci\documents\paczka_55\plus\projekt7\ksiazkaadresowa.h
+	<iostream>
+	"UzytkownikMenedzer.h"
+	"AdresatMenedzer.h"
+
+1592693224 c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownikmenedzer.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"PlikZUzytkownikami.h"
+
+1594253528 c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Uzytkownik.h"
+	"MetodyPomocnicze.h"
+	"PlikTekstowy.h"
+
+1592693224 c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.h
+	<iostream>
+
+1595420615 source:c:\users\wojci\documents\paczka_55\plus\projekt7\main.cpp
+	<iostream>
+	"Ksiazkaadresowa.h"
+
+1595407764 source:c:\users\wojci\documents\paczka_55\plus\projekt7\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1594250312 source:c:\users\wojci\documents\paczka_55\plus\projekt7\pliktekstowy.cpp
+	"PlikTekstowy.h"
+
+1594280499 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1592693223 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1595333505 source:c:\users\wojci\documents\paczka_55\plus\projekt7\uzytkownikmenedzer.cpp
+	"UzytkownikMenedzer.h"
+
+1596416488 source:c:\users\wojci\documents\paczka_55\plus\projekt7\plikzadresatami.cpp
+	"PlikZAdresatami.h"
+
